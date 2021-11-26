@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
+    <style>
         .loginPage {
             margin: 6% 35% auto;
             background-color: white;
@@ -26,6 +26,25 @@
         .loginPage>form>h2 {
             color: black;
             padding: 5% auto;
+        }
+        .loginPage>form>h2>span>button{
+            float: right;
+            width: fit-content;
+            position: relative;
+            margin-left: 5px;
+            margin-top: -17px;
+            padding: 10px;
+            height: 4%;
+            background-color: transparent;
+            color: red;
+            border: none;
+            cursor: pointer;
+            font-size: xx-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .loginPage>form>h2>span>button:hover{
+            box-shadow: 0px 0.5px 2px 0.5px darkcyan, 0px -0.3px 2px 0.5px rgb(23, 184, 184);
         }
 
         .loginPage>form>input[type=text],
@@ -62,24 +81,6 @@
         .loginPage>form>button:hover {
             box-shadow: 0px 0.5px 1px 0.3px darkcyan;
         }
-
-        .loginPage>button {
-            position: relative;
-            margin-left: 5px;
-            padding: 10px;
-            width: 100%;
-            height: 4%;
-            background-color: transparent;
-            color: red;
-            border: none;
-            cursor: pointer;
-            font-size: xx-large;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        .loginPage>button:hover {
-            box-shadow: 0px 0.5px 2px 0.5px darkcyan;
-        }
     </style>
 </head>
 
@@ -87,7 +88,11 @@
     <!-- ------------------------------------------Login Page HTML----------------------------------------------- -->
     <div id="loginPage" class="loginPage">
         <form action="" method="post">
-            <h2>Sign Up</h2>
+            <h2>Sign Up
+                <span>
+                    <button onclick="document.getElementById('loginPage').style.display='none'">&times;</button>
+                </span>
+            </h2>
             <p>Please fill in this form to create an account</p>
             <input type="text" name="userName/userEmail" id="userId" placeholder="Enter your name or e-mail"
                 required><br>
@@ -98,7 +103,6 @@
 
             <button id="subLoginPage">Continued</button>
         </form>
-        <button onclick="document.getElementById('loginPage').style.display='none'">&times;</button>
     </div>
 </body>
 
