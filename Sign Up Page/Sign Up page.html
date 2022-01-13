@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         .loginPage {
             margin: 6% 35% auto;
             background-color: white;
@@ -41,6 +45,7 @@
             cursor: pointer;
             font-size: xx-large;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            transition: 0.3s linear;
         }
 
         .loginPage>form>h2>span>button:hover{
@@ -57,6 +62,7 @@
             margin: 20px 10px 10px;
             padding: 10px 15px;
             font-size: large;
+            transition: 0.2s linear;
         }
 
         .loginPage>form>input[type=text]:hover,
@@ -76,10 +82,47 @@
             font-size: large;
             font-weight: 900;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            transition: 0.3s linear;
         }
 
         .loginPage>form>button:hover {
             box-shadow: 0px 0.5px 1px 0.3px darkcyan;
+        }
+        
+        /* --------------------------Responsive---------------------------------- */
+        @media screen and (max-width:360px) {
+            .loginPage {
+                margin: 5% 3%;
+                width: 90%;
+            }
+
+            .loginPage>form>h2 {
+                margin: 4% auto;
+            }
+            
+            .loginPage>form>h2>span>button{
+                padding: 4px 6px;
+                height: 3%;
+            }
+
+            .loginPage>form>input[type=text],
+            input[type=password] {
+                width: 95%;
+                margin: 10px 5px 5px;
+                padding: 5px 7px;
+            }
+
+            .loginPage>form>input[type=text]::placeholder,
+            input[type=password]::placeholder {
+                font-size: medium;
+            }
+
+            .loginPage>form>button {
+                margin: 7px auto;
+                padding: 5px;
+                font-size: medium;
+                font-weight: 600;
+            }
         }
     </style>
 </head>
